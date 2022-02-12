@@ -1,0 +1,171 @@
+<div class="fondo">
+    <div *ngIf="!preload">
+        <div class="content" *ngFor="let poke of pokemonData;let i = index">
+
+            <div class="row">
+
+                <div class="col-11">
+                    <a routerLink="/">
+                        <img src="../../assets/img/arrow-left-solid.svg" class="back-img" >
+                    </a>
+                </div>
+
+                <!-- <div class="col-1">
+                    
+                    <img (click)="favorites(poke)" src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/50/000000/external-heart-casino-kiranshastry-lineal-kiranshastry.png"/>
+                    <img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-Heart-valentine-love-bearicons-glyph-bearicons.png"/>
+
+                
+                </div> -->
+
+            </div>
+            <div class="row">
+                <div class="col-lg-11 col-md-11 col-sm-12">
+                    <h1 class="name">{{poke.name}}</h1>
+                    <div class="type row" >
+                        <p *ngFor="let types of type" class="type-b col-lg-2 col-md-2 col-sm-12" >{{types.type.name}}</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-12">
+                    <p class="id-class">#{{poke.id}}</p>
+                </div>
+            </div>
+            <div class="img ">
+                <img class="col-lg-12 col-md-12 col-sm-6" src="{{poke.img}}" alt="">
+                <p class="col-lg-12 col-md-12 col-sm-6 txt-detail">{{detail_one}}</p>
+            </div>
+            <div class="row " style="background: white; padding-top: 4%;">
+
+                <h2 style="margin-bottom: 3%;">Statistics</h2>
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h4>Max HP:</h4>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-12">
+                        <p class="hp ">{{hp}}</p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        
+                        <div class="progress">
+                            
+                            <div class="progress-bar" [ngStyle]="{'width.%': hp}" role="progressbar"  aria-valuenow="" aria-valuemin="0" aria-valuemax="5000"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h4>Attack:</h4>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-12">
+                        <p class="hp ">{{attack}}</p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        
+                        <div class="progress">
+                            
+                            <div class="progress-bar" [ngStyle]="{'width.%': attack}" role="progressbar"  aria-valuenow="" aria-valuemin="0" aria-valuemax="5000"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h4>Defense:</h4>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-12">
+                        <p class="hp ">{{defense}}</p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        
+                        <div class="progress">
+                            
+                            <div class="progress-bar" [ngStyle]="{'width.%': defense}" role="progressbar"  aria-valuenow="" aria-valuemin="0" aria-valuemax="5000"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h4>Special Attack:</h4>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-12">
+                        <p class="hp ">{{specialAttack}}</p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        
+                        <div class="progress">
+                            
+                            <div class="progress-bar" [ngStyle]="{'width.%': specialAttack}" role="progressbar"  aria-valuenow="" aria-valuemin="0" aria-valuemax="5000"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h4>specia lDefense:</h4>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-12">
+                        <p class="hp ">{{specialDefense}}</p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        
+                        <div class="progress">
+                            
+                            <div class="progress-bar" [ngStyle]="{'width.%': specialDefense}" role="progressbar"  aria-valuenow="" aria-valuemin="0" aria-valuemax="5000"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h4 >Speed:</h4>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-12">
+                        <p class="hp ">{{speed}}</p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        
+                        <div class="progress">
+                            
+                            <div class="progress-bar" [ngStyle]="{'width.%': speed}" role="progressbar"  aria-valuenow="" aria-valuemin="0" aria-valuemax="5000"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div> 
+    <div *ngIf="preload"
+    class="d-flex justify-content-center">
+        
+        <div class="spinner-border text-muted my-5"></div>
+
+    </div>   
+</div>

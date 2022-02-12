@@ -1,0 +1,19 @@
+.container-fluid{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.nav-ite{
+    margin: auto;
+}
+.img-pokedex{
+    width: 50px;
+    height: auto;
+}
+.img-pokemon {
+    width: 150px;
+    margin-left: 30%;
+}
+
+.bg-light {
+    background-color: #E5E8E8 !important;
+}

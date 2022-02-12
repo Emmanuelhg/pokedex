@@ -1,0 +1,21 @@
+.content{
+    margin-top: 6%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+} 
+.img-pokemon-result{
+    width: 50%;
+    height: auto;
+}
+.content-d {
+    text-align: center;
+}
+.pagination{
+    text-align: center;
+    justify-content: center;
+}
+.pokemon-link{
+    text-decoration: none;
+    color: black;
+}
